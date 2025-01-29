@@ -11,9 +11,9 @@ import AllAppointment from './Pages/Admin/AllAppointment';
 import DashBoared from './Pages/Admin/DashBoared';
 import DoctorsList from './Pages/Admin/DoctorsList';
 import { DoctorContext } from './Context/DoctorContext';
-import DoctorDashbored from './Pages/Doctor/doctorDashbored';
-import DoctorAppointment from './Pages/Doctor/doctorAppointment';
-import DoctorProfile from './Pages/Doctor/doctorProfile';
+import DoctorDashbored from './Pages/Doctor/DoctorDashbored';
+import DoctorAppointment from './Pages/Doctor/DoctorAppointment';
+import DoctorProfile from './Pages/Doctor/DoctorProfile';
 
 
 function App() {
