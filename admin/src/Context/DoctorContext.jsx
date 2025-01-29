@@ -6,7 +6,7 @@ import axios from "axios";
 export const DoctorContext = createContext()
 
 const DoctorContextProvider=(props)=>{
-    const backendURL = "https://healthcare-backend-project.onrender.com"
+    const backendURL = "https://healthcare-2a1g.onrender.com"
       
     
     const [dtoken, setdtoken] = useState(localStorage.getItem('dtoken')?localStorage.getItem('dtoken'):'')
