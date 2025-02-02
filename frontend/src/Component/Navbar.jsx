@@ -117,6 +117,13 @@ const Navbar = () => {
                           My Appointment
                         </a>
                         <a
+                        onClick={() => navigate("invoice")}
+                          
+                          className="flex items-center gap-x-3.5 py-2 px-3 cursor-pointer rounded-lg text-sm text-black"
+                        >
+                          Invoice
+                        </a>
+                        <a
                           onClick={Logout}
                           className="flex items-center gap-x-3.5 py-2 px-3 cursor-pointer rounded-lg text-sm text-black"
                         >

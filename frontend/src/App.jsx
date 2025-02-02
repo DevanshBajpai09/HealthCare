@@ -11,6 +11,7 @@ import My_appointment from './pages/My_appointment'
 import Navbar from './Component/Navbar'
 import Footer from './Component/Footer'
 import { Toaster } from 'react-hot-toast';
+import Invoice from './Component/Invoice'
 
 
 const App = () => {
@@ -29,6 +30,7 @@ const App = () => {
         <Route path='/login' element={<Login/>}/>
         <Route path='/myappointment' element={<My_appointment/>}/>
         <Route path='/profile' element={<Profile/>}/>
+        <Route path='/invoice' element={<Invoice/>}/>
 
 
 
