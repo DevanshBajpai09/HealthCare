@@ -8,7 +8,7 @@ export const AppContext = createContext()
 
 const AppProvider = (props)=>{
     const currencySymbol = '$'
-    const backendURL = import.meta.env.VITE_BACKEND_URL
+    const backendURL = "https://healthcare-1-bakcend.onrender.com"
     const [doctors, setDoctors] = useState([])
     const [token, setToken] = useState(localStorage.getItem('token')?localStorage.getItem('token'):false)
     const [userData, setUserData] = useState(false)
