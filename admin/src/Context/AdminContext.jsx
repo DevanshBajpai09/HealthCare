@@ -14,7 +14,7 @@ export const AdminContext = createContext()
 
 
 const AdminContextProvider=(props)=>{
-    const backendURL = import.meta.env.VITE_BACKEND_URL
+    const backendURL = "https://healthcare-1-bakcend.onrender.com"
     const [dashData, setdashData] = useState(false)
     const [doctors , setdoctors] = useState([])
     const [appointments, setappointments] = useState([])
