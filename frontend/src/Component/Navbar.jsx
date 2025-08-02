@@ -13,9 +13,9 @@ const Navbar = () => {
   const toggleDropdown = () => setDropdownVisible(!dropdownVisible);
 
 
-  const {token , setToken ,userData} = useContext(AppContext)
+  const { token, setToken, userData } = useContext(AppContext)
 
-  const Logout =()=>{
+  const Logout = () => {
     setToken(false)
     localStorage.removeItem('token')
   }
@@ -59,7 +59,7 @@ const Navbar = () => {
                   <NavLink to="/doctors" className="rounded-md px-3 py-2 mt-1 text-sm font-medium text-black hover:bg-gray-700 hover:text-white">Doctors</NavLink>
                   <NavLink to="/about" className="rounded-md px-3 py-2 mt-1 text-sm font-medium text-black hover:bg-gray-700 hover:text-white">About</NavLink>
                   <NavLink to="/contact" className="rounded-md px-3 py-2 mt-1 text-sm font-medium text-black hover:bg-gray-700 hover:text-white">Contact</NavLink>
-              <NavLink to="" className="text-black border border-gray-400 bg-white rounded-full px-3 py-0.5 mt-1 text-sm font-medium">Admin Panel</NavLink>
+                  <NavLink target='blank' to="https://medical-chatbot-main-6.onrender.com" className="rounded-md px-3 py-2 mt-1 text-sm font-medium text-black hover:bg-gray-700 hover:text-white">Disease Detector</NavLink>
                 </div>
               </div>
 
@@ -67,7 +67,7 @@ const Navbar = () => {
             <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
 
               {
-                token  && userData ?
+                token && userData ?
                   <div className="hs-dropdown relative inline-flex">
                     <button
                       onClick={toggleDropdown}
@@ -116,13 +116,8 @@ const Navbar = () => {
                         >
                           My Appointment
                         </a>
-                        <a
-                        onClick={() => navigate("invoice")}
-                          
-                          className="flex items-center gap-x-3.5 py-2 px-3 cursor-pointer rounded-lg text-sm text-black"
-                        >
-                          Invoice
-                        </a>
+                        <NavLink target='blank' to="https://health-care-ten-henna.vercel.app/" className="flex items-center gap-x-3.5 py-2 px-3 cursor-pointer rounded-lg text-sm text-black">Admin Login</NavLink>
+                        
                         <a
                           onClick={Logout}
                           className="flex items-center gap-x-3.5 py-2 px-3 cursor-pointer rounded-lg text-sm text-black"
@@ -137,18 +132,18 @@ const Navbar = () => {
                     Create Account
                   </button>
               }
-              <img onClick={()=>setshowMenu(true)} className='w-6 md:hidden' src={assets.menu_icon} alt="" />
+              <img onClick={() => setshowMenu(true)} className='w-6 md:hidden' src={assets.menu_icon} alt="" />
               {/* mobile menu */}
-              <div className={` ${showMenu ? 'fixed w-full':'h-0 w-0'} md:hidden  right-0 top-0 bottom-0 z-20 overflow-hidden bg-white transition-all`}>
+              <div className={` ${showMenu ? 'fixed w-full' : 'h-0 w-0'} md:hidden  right-0 top-0 bottom-0 z-20 overflow-hidden bg-white transition-all`}>
                 <div className='flex items-center justify-between px-20 py-7'>
                   <img className='w-16' src={assets.logo} alt="" />
-                  <img className='w-7' onClick={()=>setshowMenu(false)} src={assets.cross_icon} alt="" />
+                  <img className='w-7' onClick={() => setshowMenu(false)} src={assets.cross_icon} alt="" />
                 </div>
                 <ul className='flex flex-col items-center gap-2 mt-5 px-2 text-lg font-medium'>
-                  <NavLink onClick={()=>setshowMenu(false)}  to='/'><p className='px-4 py-2 rounded inline-block'>Home</p></NavLink>
-                  <NavLink onClick={()=>setshowMenu(false)}  to='/doctors'><p className='px-4 py-2 rounded inline-block'>All Doctors</p></NavLink>
-                  <NavLink onClick={()=>setshowMenu(false)}  to='/about'><p className='px-4 py-2 rounded inline-block'>About</p></NavLink>
-                  <NavLink onClick={()=>setshowMenu(false)}  to='/contact'><p className='px-4 py-2 rounded inline-block'>Contact</p></NavLink>
+                  <NavLink onClick={() => setshowMenu(false)} to='/'><p className='px-4 py-2 rounded inline-block'>Home</p></NavLink>
+                  <NavLink onClick={() => setshowMenu(false)} to='/doctors'><p className='px-4 py-2 rounded inline-block'>All Doctors</p></NavLink>
+                  <NavLink onClick={() => setshowMenu(false)} to='/about'><p className='px-4 py-2 rounded inline-block'>About</p></NavLink>
+                  <NavLink onClick={() => setshowMenu(false)} to='/contact'><p className='px-4 py-2 rounded inline-block'>Contact</p></NavLink>
                 </ul>
               </div>
 
@@ -157,9 +152,9 @@ const Navbar = () => {
           </div>
         </div>
 
-      
 
-       
+
+
       </nav>
 
 
